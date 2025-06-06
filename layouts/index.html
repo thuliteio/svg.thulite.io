@@ -1,0 +1,59 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1>{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/quick-start/" role="button">{{ i18n "get_started" }}</a>
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+  {{ if site.Params.doks.backgroundDots -}}
+  <div class="d-flex justify-content-start">
+    <div class="bg-dots"></div>
+  </div>
+  {{ end -}}
+  {{ if eq $.Site.Language.LanguageName "English" }}
+  <section class="section section-md section-features">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Embed SVG</h2>
+          <p>Allows embedding SVG files directly into HTML for better control and styling.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Hugo templates</h2>
+          <p>Includes Hugo templates for rendering SVGs with customizable attributes.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Fallback icons</h2>
+          <p>Supports fallback to icon sets when specific SVGs aren't found.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Accessibility</h2>
+          <p>Handles accessibility features like titles and descriptions for SVGs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}
+
+{{ define "sidebar-footer" }}
+{{ if site.Params.doks.sectionFooter -}}
+<section class="section section-md container-fluid bg-light">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-7">
+      <h2 class="mt-2">Start building with Doks today</h2>
+      <a class="btn btn-primary rounded-pill px-4 my-2" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}prologue/introduction/" role="button">{{ i18n "get-started" }}</a>
+    </div>
+  </div>
+</section>
+{{ end -}}
+{{ end }}
