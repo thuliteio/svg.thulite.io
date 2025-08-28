@@ -1,3 +1,1 @@
-# svg.thulite.io
-
-Thulite SVG documentation
+# SVG documentation
