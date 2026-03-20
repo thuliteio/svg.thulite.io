@@ -1,6 +1,7 @@
 # Hugo
-title = "SVG"
-description = "Congrats on setting up a new Doks project!"
+title = "Thulite"
+subTitle = "SVG"
+description = "SVGs for Thulite websites. Simple setup. Sensible defaults."
 images = ["cover.png"]
 
 # mainSections
