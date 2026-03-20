@@ -1,1 +1,152 @@
 // Put your custom SCSS code here
+.home .navbar {
+  border-bottom: 1px solid $gray-200;
+}
+
+.home .border-top {
+  border-top: 1px solid $gray-200 !important;
+}
+
+@include color-mode(dark) {
+  body.home .navbar {
+    border-bottom: 1px solid $border-dark;
+  }
+
+  .home .border-top {
+    border-top: 1px solid $border-dark !important;
+  }
+}
+
+.section-header {
+  padding: 3rem 0;
+}
+
+.section-main {
+  padding: 1rem 0;
+}
+
+.section-footer {
+  padding: 1rem 0;
+}
+
+.home .btn-lg {
+  font-size: 1.125rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .section-header {
+    padding: 5rem 0;
+  }
+
+  .section-main {
+    padding: 3rem 0;
+  }
+
+  .section-footer {
+    padding: 3rem 0;
+  }
+
+  .home .btn-lg {
+    font-size: 1.1875rem;
+  }
+}
+
+.btn-toggle {
+  text-transform: none;
+}
+
+.docs-links h3,
+.docs-links .h3,
+.page-links h3,
+.page-links .h3 {
+  text-transform: none;
+}
+
+.section-cards {
+  .card {
+    margin: 0;
+    padding: 1rem;
+    height: 100%;
+  }
+
+  .card-title {
+    margin-top: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section-cards .col-lg-7:nth-child(2n) .card {
+    margin-top: 3rem;
+    margin-bottom: -3rem;
+  }
+}
+
+.content dl dt {
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.content dl dd {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.navbar-brand {
+  font-family: $font-family-monospace;
+  font-weight: $headings-font-weight;
+  margin-right: auto;
+}
+
+@include color-mode(dark) {
+  .navbar-brand {
+    color: $white;
+  }
+}
+
+.link--text {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $link-color;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+  }
+
+}
+
+@include color-mode(dark) {
+  .link--text {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.15em;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $link-color-dark;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.15em;
+    }
+
+  }
+}
+
+.footer .text-muted {
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.15em;
+    }
+}
+
+.expressive-code pre > code {
+  font-family: $font-family-monospace;
+}

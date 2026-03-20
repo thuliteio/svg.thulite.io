@@ -1,9 +1,9 @@
 ---
-title: "Thulite Inline SVG"
+title: "Improve your SVGs performance"
 description: ""
-lead: "Thulite Inline SVG is an npm package that provides inline SVG integration for Thulite websites."
+lead: "SVGs for Thulite websites. Simple setup. Sensible defaults."
 date: 2023-09-07T16:33:54+02:00
-lastmod: 2023-09-07T16:33:54+02:00
+lastmod: 2026-03-20T08:50:59+01:00
 draft: false
 seo:
   title: "Welcome to Doks" # custom title (optional)
