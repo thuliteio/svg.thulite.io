@@ -1,11 +1,11 @@
-title = "SVG"
+title = "Thulite SVG"
 baseurl = "http://localhost/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
-# disableKinds = ["taxonomy", "term"]
+disableKinds = ["taxonomy", "term"]
 enableEmoji = true
-enableGitInfo = false
+enableGitInfo = true
 enableRobotsTXT = true
 languageCode = "en-US"
 pagerSize = 10
@@ -23,8 +23,23 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
   enable = true
 
 [outputs]
-  home = ["HTML", "RSS", "searchIndex"]
-  section = ["HTML", "RSS", "SITEMAP"]
+  home = ["html", "rss", "sitemap", "searchIndex", "llms"]
+  page = ["html", "markdown"]
+  section = ["html", "rss", "sitemap"]
+  taxonomy = ["html", "rss", "sitemap"]
+  term = ["html", "rss", "sitemap"]
+
+[outputFormats.markdown]
+  baseName = "index"
+  isHTML = false
+  isPlainText = true
+  mediaType = "text/markdown"
+
+[outputFormats.llms]
+  baseName = "llms"
+  isHTML = false
+  isPlainText = true
+  mediaType = "text/plain"
 
 [outputFormats.searchIndex]
   mediaType = "application/json"
@@ -33,7 +48,7 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
   notAlternative = true
 
 # Add output format for section sitemap.xml
-[outputFormats.SITEMAP]
+[outputFormats.sitemap]
   mediaType = "application/xml"
   baseName = "sitemap"
   isHTML = false
@@ -47,7 +62,7 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
   priority = 0.5
 
 [caches]
-  [caches.getjson]
+  [caches.getresource]
     dir = ":cacheDir/:project"
     maxAge = -1 # "30m"
 

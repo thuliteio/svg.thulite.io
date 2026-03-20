@@ -1,0 +1,60 @@
+{{ define "sidebar-prefooter" }}
+  <section class="section-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <h1 class="mt-1">{{ .Title }}</h1>
+          <p class="lead text-muted">{{ .Params.lead | safeHTML }}</p>
+          <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/quick-start/" role="button">{{ i18n "get_started" }}</a>
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-main border-top">
+    <div class="container">
+      <div class="row gy-2">
+        <div class="col-lg-5 offset-lg-1">
+          <h2 class="fs-4">Inline SVG</h2>
+          <p class="text-muted">SVGs are embedded directly in your markup for full control and better performance.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="fs-4">Automatic optimization</h2>
+          <p class="text-muted">SVG files are cleaned and minimized during build to reduce file size.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="fs-4">Style with CSS</h2>
+          <p class="text-muted">Easily control colors, size, and states using standard CSS.</p>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <h2 class="fs-4">Simple integration</h2>
+          <p class="text-muted">Import and use SVGs with minimal setup or configuration.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="fs-4">Reusable components</h2>
+          <p class="text-muted">Use SVGs as reusable components across your site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+{{ define "sidebar-footer" }}
+  <section class="section-footer border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5  offset-lg-1">
+          <h2 class="fs-4 mt-3">Documentation</h2>
+          <ul class="list-unstyled">
+            <li><a class="link link--text" href="https://docs.thulite.io/">Thulite</a></li>
+            <li><a class="link link--text" href="https://seo.thulite.io/">SEO</a></li>
+            <li><a class="link link--text" href="https://images.thulite.io/">Images</a></li>
+            <li><a class="link link--text" href="https://svg.thulite.io/">SVG</a></li>
+            <li><a class="link link--text" href="https://getdoks.org/">Doks</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}
