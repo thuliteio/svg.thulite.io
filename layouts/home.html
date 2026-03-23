@@ -1,39 +1,66 @@
 {{ define "sidebar-prefooter" }}
+  <div aria-hidden="true" class="page-wash"></div>
+
   <section class="section-header">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
           <h1 class="mt-1">{{ .Title }}</h1>
           <p class="lead text-muted">{{ .Params.lead | safeHTML }}</p>
-          <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}guides/quick-start/" role="button">{{ i18n "get_started" }}</a>
-          {{ .Content }}
+          <a class="btn btn-primary btn-cta rounded-pill btn-lg my-3" href="/docs/{{ if site.Params.doks.docsVersioning }}{{ site.Params.doks.docsVersion }}/{{ end }}start-here/getting-started/" role="button">{{ i18n "get_started" }}</a>
+        </div>
+        <div class="col-lg-12">
+          <div class="header-content">
+            {{ .Content }}
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-main border-top">
+  <section class="section-main">
     <div class="container">
-      <div class="row gy-2">
-        <div class="col-lg-5 offset-lg-1">
-          <h2 class="fs-4">Inline SVG</h2>
-          <p class="text-muted">SVGs are embedded directly in your markup for full control and better performance.</p>
+      <h2 class="text-center mt-lg-0">What's included</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-5">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="fs-5">{{ partial "inline-svg" (dict "src" "outline/svg" "stroke-width" "1.5" "class" "text-muted me-2" ) }}Inline SVG</h3>
+              <p class="text-muted fs-6">SVGs are embedded directly in your markup for full control and better performance.</p>
+            </div>
+          </div>
         </div>
         <div class="col-lg-5">
-          <h2 class="fs-4">Automatic optimization</h2>
-          <p class="text-muted">SVG files are cleaned and minimized during build to reduce file size.</p>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="fs-5">{{ partial "inline-svg" (dict "src" "outline/arrows-minimize" "stroke-width" "1.5" "class" "text-muted me-2" ) }}Automatic optimization</h3>
+              <p class="text-muted fs-6">SVG files are cleaned and minimized during build to reduce file size.</p>
+            </div>
+          </div>
         </div>
         <div class="col-lg-5">
-          <h2 class="fs-4">Style with CSS</h2>
-          <p class="text-muted">Easily control colors, size, and states using standard CSS.</p>
-        </div>
-        <div class="col-lg-5 offset-lg-1">
-          <h2 class="fs-4">Simple integration</h2>
-          <p class="text-muted">Import and use SVGs with minimal setup or configuration.</p>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="fs-5">{{ partial "inline-svg" (dict "src" "outline/brand-css3" "stroke-width" "1.5" "class" "text-muted me-2" ) }}Style with CSS</h3>
+              <p class="text-muted fs-6">Easily control colors, size, and states using standard CSS.</p>
+            </div>
+          </div>
         </div>
         <div class="col-lg-5">
-          <h2 class="fs-4">Reusable components</h2>
-          <p class="text-muted">Use SVGs as reusable components across your site.</p>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="fs-5">{{ partial "inline-svg" (dict "src" "outline/plug-connected" "stroke-width" "1.5" "class" "text-muted me-2" ) }}Simple integration</h3>
+              <p class="text-muted fs-6">Import and use SVGs with minimal setup or configuration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="fs-5">{{ partial "inline-svg" (dict "src" "outline/components" "stroke-width" "1.5" "class" "text-muted me-2" ) }}Reusable components</h3>
+              <p class="text-muted fs-6">Use SVGs as reusable components across your site.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -41,18 +68,28 @@
 {{ end }}
 
 {{ define "sidebar-footer" }}
-  <section class="section-footer border-top">
+  <section class="section-prefooter">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-5  offset-lg-1">
-          <h2 class="fs-4 mt-3">Documentation</h2>
-          <ul class="list-unstyled">
-            <li><a class="link link--text" href="https://docs.thulite.io/">Thulite</a></li>
-            <li><a class="link link--text" href="https://seo.thulite.io/">SEO</a></li>
-            <li><a class="link link--text" href="https://images.thulite.io/">Images</a></li>
-            <li><a class="link link--text" href="https://svg.thulite.io/">SVG</a></li>
-            <li><a class="link link--text" href="https://getdoks.org/">Doks</a></li>
-          </ul>
+      <h2 class="text-center mt-lg-0">Open source</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center">
+          <p class="text-muted fs-6">Help keep Thulite sustainable by supporting maintenance, documentation, and long-term development.</p>
+          <a target="_blank" href="https://github.com/sponsors/thuliteio" class="icon-link">Sponsor Thulite{{ partial "inline-svg" (dict "src" "outline/chevron-right" "stroke-width" "1.5" ) }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-footer">
+    <div class="container">
+      <h2 class="text-center mt-lg-0">FAQs</h2>
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-8">
+          <details><summary>What does Thulite SVGs do?</summary><span class="fs-6">Thulite SVGs makes it easy to use, optimize, and integrate SVGs in your project.</span></details>
+          <details><summary>Why use SVGs instead of images?</summary><span class="fs-6">SVGs are lightweight, scalable, and crisp at any size—ideal for icons and UI elements.</span></details>
+          <details><summary>Do I need to optimize SVGs manually?</summary><span class="fs-6">No. SVGs are automatically optimized for efficient delivery.</span></details>
+          <details><summary>Can I style SVGs with CSS?</summary><span class="fs-6">Yes. You can style SVGs with CSS or utility classes for full control.</span></details>
+          <details><summary>Does it work with Markdown and HTML?</summary><span class="fs-6">Yes. SVGs integrate seamlessly with Markdown and HTML in your project.</span></details>
         </div>
       </div>
     </div>
