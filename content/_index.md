@@ -3,7 +3,7 @@ title: "Improve your SVGs performance"
 description: ""
 lead: "SVGs for Thulite websites. Simple setup. Sensible defaults."
 date: 2023-09-07T16:33:54+02:00
-lastmod: 2026-03-23T14:44:07+01:00
+lastmod: 2026-04-17T08:28:33+02:00
 draft: false
 seo:
   title: "Thulite SVG — Improve your SVGs performance" # custom title (optional)

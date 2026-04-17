@@ -70,7 +70,7 @@
 {{ define "sidebar-footer" }}
   <section class="section-prefooter">
     <div class="container">
-      <h2 class="text-center mt-lg-0">Open source</h2>
+      <h2 class="text-center mt-lg-0">Open source, MIT licensed</h2>
       <div class="row justify-content-center">
         <div class="col-lg-7 text-center">
           <p class="text-muted fs-6">Help keep Thulite sustainable by supporting maintenance, documentation, and long-term development.</p>
@@ -94,4 +94,21 @@
       </div>
     </div>
   </section>
+
+  <section class="section-prefooter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-13 col-lg-7 text-center">
+          <h2 class="text-center mt-lg-0">SVG, ready in minutes</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-5 text-center">
+          <p class="text-muted fs-6">Add SVG to your Thulite project in minutes — minimal setup, maximum control.</p>
+          <a href="/docs/start-here/getting-started/" class="icon-link">{{ i18n "get_started" }}{{ partial "inline-svg" (dict "src" "outline/chevron-right" "stroke-width" "1.5" ) }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 {{ end }}
