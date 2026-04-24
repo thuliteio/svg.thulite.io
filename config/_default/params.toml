@@ -120,8 +120,8 @@ mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
 
 # Inline SVG (@thulite/inline-svg)
 [inline_svg]
-  iconSetDir = "tabler-icons" # "tabler-icons" (default)
-  iconSetVariant = "outline" # outline (default) or filled
+  iconSetDir = "tabler-icons" # "tabler-icons" (default) or "lucide" (for example)
+  iconSetVariant = "" # outline (default) or filled; deprecated
 
 # SEO (@thulite/seo)
 [seo]

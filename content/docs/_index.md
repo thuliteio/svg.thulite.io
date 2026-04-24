@@ -1,9 +1,9 @@
 ---
 title: "Docs"
-description: ""
-summary: ""
+description: "Explore the documentation for Thulite Inline SVG, from quick-start basics to full API reference for parameters, shortcode usage, and partial arguments."
+summary: "Explore the documentation for Thulite Inline SVG, from quick-start basics to full API reference for parameters, shortcode usage, and partial arguments."
 date: 2023-09-07T16:12:03+02:00
-lastmod: 2023-09-07T16:12:03+02:00
+lastmod: 2026-04-24T15:36:34+02:00
 draft: false
 weight: 999
 toc: true
