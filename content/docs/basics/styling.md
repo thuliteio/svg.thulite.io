@@ -33,7 +33,7 @@ All inlined SVGs receive the `svg-inline` class by default, making it easy to st
 
 ## SVG attributes
 
-You can specify [SVG attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute), for example:
+You can specify [SVG attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute), for example:
 
 ```md
 {{</* inline-svg src="alert-triangle" class="warning-icon" title="Warning" width="32" height="32" stroke-width="1.5" stroke="orange" */>}}
